@@ -3,14 +3,27 @@ if ($_POST) {
   # code...
   $valueA = $_POST['valueA'];
   $valueB = $_POST['valueB'];
-  if ($valueA !== $valueB && $valueA > $valueB) {
+
+  $sum = $valueA + $valueB;
+  $sub = $valueA - $valueB;
+  $mul = $valueA * $valueB;
+  $div = $valueA / $valueB;
+
+  echo "Sum: $sum <br>";
+  echo "Sub: $sub <br>";
+  echo "Mul: $mul <br>";
+  echo "Div: $div <br>";
+
+  if ($valueA == $valueB) {
     # code...
-    echo "El valor de A es differente al valor de B y A es mayor que B";
-  } else if ($valueA < $valueB) {
-    echo "Value A es menor que Value B";
-  } else {
-    echo "Value A es igual que Value B";
+    echo "Value A es igual que Value B <br>";
+    if ($valueA == 4) {
+      # code...
+      echo "Value A es igual que $valueA";
+    }
   }
+
+  // sera que eso funciona?
 }
 ?>
 
@@ -25,7 +38,7 @@ if ($_POST) {
 </head>
 
 <body>
-  <form action="ejercicio10.php" method="post">
+  <form action="ejercicio11.php" method="post">
     <label for="valueA">Value A</label>
     <input type="text" name="valueA" id="valueA">
     <br>
