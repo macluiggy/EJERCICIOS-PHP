@@ -3,28 +3,11 @@ if ($_POST) {
   # code...
   $valueA = $_POST['valueA'];
   $valueB = $_POST['valueB'];
-
-  $sum = $valueA + $valueB;
-  $sub = $valueA - $valueB;
-  $mul = $valueA * $valueB;
-  $div = $valueA / $valueB;
-
-  echo "Sum: $sum <br>";
-  echo "Sub: $sub <br>";
-  echo "Mul: $mul <br>";
-  echo "Div: $div <br>";
-
-  if ($valueA == $valueB) {
+  if ($valueA !== $valueB) {
     # code...
-    echo "Value A es igual que Value B <br>";
-    if ($valueA == 4) {
-      # code...
-      echo "Value A es igual que $valueA";
-    }
-  }
-
-  if ($valueA == $valueB && $valueB == 5) {
-    echo "Value A es igual que Value B y el valor es igual a 5";
+    echo "El valor de A es differente al valor de B";
+  } else {
+    echo "Value A es igual que Value B";
   }
 }
 ?>
@@ -40,7 +23,7 @@ if ($_POST) {
 </head>
 
 <body>
-  <form action="ejercicio11.php" method="post">
+  <form action="ejercicio12.php" method="post">
     <label for="valueA">Value A</label>
     <input type="text" name="valueA" id="valueA">
     <br>
